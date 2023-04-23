@@ -18,7 +18,7 @@ export default function Home() {
 
   const showCitations = () => {
     editor.commands.insertContent(chunks[selected].in_text_citation);
-    editor.commands.insertContent(`\n\n chunks[selected].full_citation`);
+    editor.commands.insertContent(`\n\n ${chunks[selected].full_citation}`);
   };
 
   const buttonClicked = async () => {
@@ -62,7 +62,7 @@ export default function Home() {
           Hi there,
         </h2>
         <p>
-          Start typing an academic paper about mosquitos here! Once you have some text, highlight it, and click generate citation above!
+          Start typing an academic paper about mosquitos here! Once you have some text, highlight it, and click cite this for me above!
         </p>
       `,
   });
@@ -74,7 +74,7 @@ export default function Home() {
           className=" btn btn-secondary w-full text-3xl font-bold underline mx-auto text-center"
           onClick={buttonClicked}
         >
-          Find Citation!
+          Cite this for me!
         </button>
         <TipTap editor={editor} />
       </div>
