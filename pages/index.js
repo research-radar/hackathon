@@ -107,7 +107,12 @@ export default function Home() {
             <h2 className="card-title">Citations over here!</h2>
             <p>{aiResponse}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-ghost">Nope!</button>
+              <button
+                className="btn btn-ghost"
+                onClick={() => setAiResponse("")}
+              >
+                Nope!
+              </button>
               <button className="btn btn-primary" onClick={showCitations}>
                 Cite!
               </button>
